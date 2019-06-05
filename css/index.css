@@ -68,289 +68,190 @@ h1, h2, h3, h4, h5 {
 
 /* Here is where the header styling will go */
 
-header {
-	width: 95%;
-	padding: 40px 75px;
-	/* border: 1px solid #000; */
-	margin: 0 auto;
+.container {
+	width: 880px;
+	margin: auto;
 }
-/* media query header container */
-@media (max-width: 800px) {
-	.header-container {
-		/* max-width: 800px; */
-		display: flex;
-		flex-direction: column;
-		/* border: 1px solid #000; */
-	}
-}
-/* aligning the navigation and the image */
-header nav {
-	background: #ddf;
-	position: fixed;
-	display: flex;
-	flex-direction: row;
-  width: 600px;
-  margin-top: 45px;
-}
-@media (max-width: 800px) {
-	.header-container nav {
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		background: none;
-		margin-left: -28px;
-	}
-	.header-container nav a {
-		padding: 0 25px;
-		margin: 0 25px;
-		color: #333;
-	}
-	.header-container nav a:hover {
-		background: none;
-		color: #333;
-	}
-}
-header nav a {
-	 
-	padding: 12px 25px;
-	text-decoration: none; 	
-	color: #333;
-}
-header nav a:hover {
-	background: #444;
-	color: #fff;
-}
-/*aliging the logo to the right */
-.logo {
-	display: flex;
-	justify-content: flex-end;
-	margin: 44px 0 85px 775px;
-}
-.alignLeft {
-	margin-left: 828px;
-}
-/* Resizing and positioning the header */
-header h1 {
-	display: flex;
-	flex-flow: row;
-	margin: 0 0 15px 185px;
-	text-align: center;
-	display: block;
-	width: 240px;
-	font-size: 75px;
-}
-/* media query for the Innovation On Demand */
-@media (max-width: 800px) {
-   header h1 {
-		justify-content: center;
-	 margin: 0 auto;
- }
-}
-  /* Adding a color border radius that act as a botton*/
- .cta a {
-	 border: 1px solid #333;
-	 width: 195px;
-	 text-align: center;
-	 text-decoration: none;
-	 padding: 6px 42px;
-	 margin: 45px 0 0 222px;
-	 color:#000;
- }
- /* centering the cta button */
- @media (max-width: 800px) {
-	 .cta {
-		 justify-content: center;
-	 }
-	 .cta a {
-		 align-items: center;
-	 }
- }
-/* Positioning the image to the rigth */
 
-header img {
+/* Header Styles */
+
+header {
+	width: 100%;
 	display: flex;
-	justify-self: end;
-	margin: -285px 0 0 640px;
 }
-/* media query for the header image */
+
+header nav {
+	margin-top: 40px; 
+	width: 610px;
+	justify-content: space-between;
+	display: flex;
+}
+
+header nav a {
+	text-decoration: none;
+	color: #b0b0b0;
+}
+
+header nav a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+header .logo {
+	margin: 28px 0 0 91px;
+}
+
+/* Call To Action (CTA) Styles */
+
+.cta {
+	display: flex;
+	margin-top: 72px;
+	justify-content: flex-end;
+}
+
+.cta .cta-text {
+	font-size: 72px;
+	text-align: center;
+	letter-spacing: 5px;
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+	align-items: center;
+	margin: 0 82px 0 0;
+}
+
+.cta .cta-text button {
+	border: 1px double black;
+	font-size: 16px;
+	background: white;
+	width: 170px;
+	height: 32px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.cta .cta-text button:hover {
+	background: black;
+	color: white;
+}
+
+/* Main Content Styles */
+
+.main-content {
+ border-top: 2px solid black; 
+ border-bottom: 2px solid black;
+ margin: 75px 0 35px 0;
+ padding: 35px 0;
+ font-size: 16px;
+ line-height: 18px;
+}
+
+.main-content .top-content {
+	display: flex;
+}
+
+.main-content .middle-img {
+	display: block;
+	margin: 30px auto;
+}
+
+.main-content .bottom-content {
+	display: flex;
+}
+
+.main-content .bottom-content p {
+	padding-right: 20px;
+}
+
+/* Contact Styles */
+
+.contact p {
+	margin: 15px 0;
+}
+
+/* Footer Styles */
+
+footer {
+	text-align: center;
+	margin: 40px 0 20px;
+}
+/* Tablet view */
 @media (max-width: 800px) {
-	header img {
+	header {
+		display: flex;
+		flex-flow: column-reverse;
+		justify-content: center;
+		align-items: center;
+	}
+	header .logo {
+		margin: 15px 0 0 0;
+	}
+	 .container {
+		 max-width: 800px;
+		 margin: 0 auto;
+	 }
+	.cta {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.cta img {
 		display: none;
 	}
-}
-/* Creating top border using section semantic tags */
-section {
-	border-top: 3px solid #ccc;
-	width: 57%;
-	margin: 0 auto;
-	border-bottom: 3px solid #ccc;
-}
-/*Moving the class secondary-h2 */
-.secondary-h2 {
-	margin-top: 24px;
-}
-.col-1, .col-2, .col-3, .col-4, .col-5 {
-	justify-content: space-evenly;
-}
-/* creating the columns */
-.first-columns, .second-columns {
-	display: flex;
-}
- 
-
- 
-/* aligning the two columns horizontal with margin right from the first one and using inline-block */
-.col-1 {
-	margin-right: 45px;
-}
-/* applying inline-block to the second column */
-
-.col-1, col-2 {
-	margin-bottom: 45px;
-}
-/* Centering the image */
-.middle-img {
-	display: none;
-	margin: 0 2px 65px 2px;
-}
-/* The last three columns will have the same style as well */
-.col-3, .col-4, .col-5 {
-	width: 250px;
-	display: inline-block;
-	line-height: 22px;
-	margin-bottom: 33px;
-}
-/* Adding spacing */
-.col-3, .col-4 {
-	margin-right: 60px;
-}
-/* Adding style to the footer */
-footer h3 {
-	margin: 25px 0 0 337px;
-}
-footer address {
-	display: none;
-	width: 200px;
-	margin: 15px 0 0 337px;
-}
-footer p {
-	padding: 18px 0;
-}
-.cpyrght {
-	display: none;
-	margin: 33px 700px 145px 700px;
-}
-/* Styling the Service page */
-
-
-
-.nav-bar {
-	margin-left: 122px;
-}
-.align-Left {
-	margin-left: 828px;
-}
- /* Making the go under the navigationv with flex */
-	.image-container {
+	.top-content {
 		display: flex;
-	   justify-content: center;;
+		flex-direction: row;
+		justify-content: space-around;
+		/* border: 1px solid #000; */
 	}
-	/* Removing the margin */
-.services-header-img {
-	margin:-45px;
-}
-
-/* Aligning the services content with flex-controller */
-main {
-	width: 893px;
-	height: 133px;
-	overflow: hidden;
-	margin: 22px auto;
-}
-/* Aligning the h2 header */
-  main h2 {
-	font-size: 24px;
-	padding: 20px 0 -11px 0;
-}
- /* Aligning the paragraph */
-   main p {
-	padding: 12px 2px;
-	line-height: 22px;
-	text-align: justify;
-}
-/* Top and bottom borders */
-.first-sctn {
-	border-top: 2px solid #000;
-	border-bottom: 2px solid #000;
-}
-/* Creating the content box */
-.flex-controller {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	margin: 33px 0;
-	overflow: hidden;
-}
-.box-content {
-	width: 430px;
-	height: 252px;
-	margin: 10px 10px;
-	background: #f4f3f4;
-	border: 1px solid #000;
-}
-/* Adding padding to H2 elements */
-.box-content h2 {
-	padding: 15px 0 1px 18px;
-}
-/* Creating line-height and padding */
-.box-content p {
-	line-height: 22px;
-	padding: 13px;
-}
-/* Creating the button inside the boxes */
-
-.btns {
-	width: 145px;
-	height: 32px;
-	border: 1px solid #000;
-	border-radius: 5px;
-	text-align: center;
-	padding: 4px;
-	margin-left: 18px;
-	background: #fff;
-}
-/* Aligning content to the left*/
-.side-contents {
-	display: flex;
-	justify-content: center;
-}
-aside {
-	margin: 30px 49px;
-	width: 389px;
-}
-aside p {
-	margin-bottom: 20px;
-	line-height: 22px;
-}
-/* Recreating the ul */
-  ul {
-	list-style-type: square;
+	.text-content {
+		/* border: 1px solid #000; */
+		margin: 0 1px;
+		padding: 0 24px;
 	}
-	li {
-		padding: 6px 0;
+	.middle-img {
+		width: 100%;
 	}
-/* Aligning image to the right */
-
-.services-info-img {
-	justify-content: left;
-	height: 300px;
-	margin-top: 28px;
+	.bottom-content {
+		display: flex;
+		justify-content: row;
+		justify-content: space-evenly;
+	}
 }
-/* Aligning the copyright information in the footer section */
-footer {
-	display: flex;
-	justify-content: center;
-}
-.cpyrght-footer {
-	padding: 85px 0;
+/* mobile view */
+@media (max-width: 500px) {
+	
+	header {
+		display: flex;
+		flex-direction: column-reverse;
+		margin: 0;
+		padding: 0;
+	}
+	header nav {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	header nav a {
+		padding: 25px 75%;
+		font-size: 2rem;
+		border-top: 1px solid #333;
+	}
+	header nav a:hover {
+		text-decoration: none;
+	}
+	header nav a:last-child {
+		border-bottom: 1px solid #333;
+	}
+	.top-content {
+		display: flex;
+		flex-direction: column;
+	}
+	.text-content {
+		padding: 12px 0;
+	}
+	.bottom-content {
+		display: flex;
+		flex-direction: column;
+	}
 }
